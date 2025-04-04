@@ -5,34 +5,40 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>personal portfolio</title>
    <link rel="stylesheet" href="style.css">
-   <script src="https://kit.fontawesome.com/dfee966ab6.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/dfee966ab6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <div id="header">
-      <div class="pavan">
-         <nav>
-            <img src="../chinnu/lokesh3.jpg">
-            <ul id="sidemenu">
+   <header id="header">
+      <nav>
+          <div class="logo">
+              <img src="portfolio/lokesh3.jpg" alt="Lokesh">
+          </div>
+          <ul id="sidemenu">
               <li><a href="#header">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#Services">Services</a></li>
-              <li><a href="#portfolio">portfolio</a></li>
-               <li><a href="#contact">contact</a></li>
-               <i class="fas fa-times"onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
-         </nav>
-         <div class="header-text"></div>
-         <p> frontend Designer</p>
-         <h1> Hi,I'm<span style="color: red;"> Lokesh</span> from India</h1>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="close-icon"><i class="fas fa-times" onclick="closeMenu()"></i></li>
+          </ul>
+          <div class="menu-icon" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
+          </div>
+      </nav>
+      <div class="header-text">
+          <p>Frontend Designer</p>
+          <h1>Hi, I'm <span>Lokesh</span> from India</h1>
       </div>
-   <!-------------------------about-------------->
-   </div>
+  </header>
+  
+    <!-------------------------about-------------->
+
    <div id="about">
       <div class="container">
          <div class="row">
             <div class="about-col-1">
-               <img src="lokesh4.jpg" height="500px" width="400px">
+               <img src="portfolio/lokesh4.jpg" height="500px" width="400px">
             </div>
             <div class="about-col-2">
                <h1 class="sub-title">About Me</h1>
@@ -183,6 +189,15 @@
       </div>
    </div>
 </div>
+<script>
+   function openMenu() {
+       document.getElementById("sidemenu").style.right = "0";
+   }
+   
+   function closeMenu() {
+       document.getElementById("sidemenu").style.right = "-250px";
+   }
+</script>
    <script src="loki.js"></script>
 </body>
 </html>
