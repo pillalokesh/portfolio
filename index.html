@@ -190,13 +190,15 @@
    </div>
 </div>
 <script>
-   function openMenu() {
-       document.getElementById("sidemenu").style.right = "0";
-   }
-   
-   function closeMenu() {
-       document.getElementById("sidemenu").style.right = "-250px";
-   }
+   const sidemenu = document.getElementById('sidemenu');
+
+function openMenu() {
+  sidemenu.style.right = "0";
+}
+
+function closeMenu() {
+  sidemenu.style.right = "-220px";
+}
 </script>
    <script src="loki.js"></script>
 </body>
